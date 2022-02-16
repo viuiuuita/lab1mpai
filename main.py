@@ -24,4 +24,8 @@ path = json_data['parameter_0']
 img = imread(path)
 #print(img)
 
-
+median_1 = median(img, np.dstack(rectangle(8,6)), mode='wrap')
+median_2 = median(img, np.dstack((diamond(5),diamond(5),diamond(5))), mode='nearest')
+median_3 = median(img, np.dstack((disk(7),disk(7),disk(7))), mode='reflect')
+median_4 = median(img, np.dstack((star(3),star(3),star(3))), mode='mirror')
+median_5 = median(img, np.dstack((disk(7),disk(7),disk(7))), mode='mirror')
