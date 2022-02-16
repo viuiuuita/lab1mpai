@@ -43,3 +43,17 @@ axes[1][1].set_axis_off()
 axes[1][1].imshow(median_4)
 axes[1][2].set_axis_off()
 axes[1][2].imshow(median_5)
+
+img_im = img[:, :, 0]
+img_im1 = median_2[:, :, 1]
+hist_red, bins_red = histogram(img)
+hist_green, bins_green = histogram(median_2)
+fig=plt.figure(figsize=(15, 15))
+fig.add_subplot(2,2,1)
+imshow(img_im)
+fig.add_subplot(2,2,2)
+imshow(median_2)
+fig.add_subplot(2,2,3)
+plt.plot(bins_red, hist_red/(img.shape[0]*img.shape[1]), color = 'red')
+fig.add_subplot(2,2,4)
+plt.plot(bins_green, hist_green/(median_2.shape[0]*median_2.shape[1]), color = 'green')
