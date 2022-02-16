@@ -57,3 +57,7 @@ fig.add_subplot(2,2,3)
 plt.plot(bins_red, hist_red/(img.shape[0]*img.shape[1]), color = 'red')
 fig.add_subplot(2,2,4)
 plt.plot(bins_green, hist_green/(median_2.shape[0]*median_2.shape[1]), color = 'green')
+
+fig.savefig('image')
+
+
